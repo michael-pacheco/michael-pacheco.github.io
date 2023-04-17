@@ -1,0 +1,233 @@
+<!-- Start header -->
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png">
+	<link rel="icon" type="image/png" href="img/robot.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Michael Pacheco</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+	<!-- CSS Files -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/material-kit.css" rel="stylesheet" />
+	<link href="css/demo.css" rel="stylesheet" />
+	<script>
+		(function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-102421203-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+
+</head>
+
+<body class="index-page">
+	<!-- Navbar -->
+	<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll"
+		style="background: rgba(0, 0, 130, 0.5);">
+		<div class="container">
+			<div class="navbar-header" style="padding-top: 5px;">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a rel="tooltip" title="Return home" data-placement="bottom" href="/"
+					class="btn btn-white btn-simple btn-just-icon">
+					MICHAEL PACHECO
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navigation-index">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a rel="tooltip" title="Return home" data-placement="bottom" href="/"
+							class="btn btn-white btn-simple btn-just-icon">
+							<i class="fa fa-home"></i>
+							Home
+						</a>
+					</li>
+					<li>
+						<a rel="tooltip" title="Blog" data-placement="bottom" href="/blog.html"
+							class="btn btn-white btn-simple btn-just-icon">
+							<!--<i class="material-icons">speaker_notes</i>-->
+							<i class="fa fa-commenting"></i>
+							Blog
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</body>
+</html>
+<!-- D3 -->
+<script src="js/d3.min.js" type="text/javascript"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<style>
+	hr.styled {
+		border-top: 1px solid #8c8b8b;
+		margin: 0;
+	}
+
+	p {
+		font-size: 16px;
+	}
+</style>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/material.min.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="js/nouislider.min.js" type="text/javascript"></script>
+<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+<script src="js/bootstrap-datepicker.js" type="text/javascript"></script>
+<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+<script src="js/material-kit.js" type="text/javascript"></script>
+<!-- End header -->
+
+<!-- Start page -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<!-- Scrolling CSS
+<link href="css/scrolling-nav.css" rel="stylesheet" />-->
+<!-- Visualization CSS -->
+<link href="css/home.css" rel="stylesheet" />
+<!-- Intro Section -->
+<section id="intro" class="intro-section" style="height: 30%;">
+  <div class="col-xs-12">
+    <div class="row">
+      <div id='title'>
+      	<h1 style="color:white;">Blog</h1>
+      </div>
+      <div id='cover'></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrapper">
+  <div class="main">
+	   <div class="section section-basic">
+      <!-- Blog Search Well -->
+      <!-- <div class="col-sm-6 col-sm-offset-3 well">
+        <h3 style="text-align: center; text-decoration: underline;">Blog Search</h3>
+        <form class="input-group" method="POST">
+          {{form.csrf_token}}
+          {{form.search(class="form-control")}}
+          <span class="input-group-btn">
+            <button type="submit" id="submit" class="btn btn-primary">
+              <span class="glyphicon glyphicon-search">Search</span>
+            </button>
+          </span>
+          <hr class="styled">
+        </form>
+      </div> -->
+    	<div class="container">
+        <div class="row" id="blog-imgs">
+		      <script>
+          	// db_json = [{"time_created":"December 6, 2016","url":"\/blog\/flask-plotly-overtime","title":"Creating a Bar Graph Visualization With Flask and Plotly","tags":["flask","plotly","bar","graph","python","web","tutorial","reddit","javascript"],"picture":"\/static\/blog\/flask-plotly-overtime\/header.jpg"},{"time_created":"February 03, 2017","url":"\/blog\/flask-d3-wordcloud","title":"Word Cloud With Flask and D3-Cloud","tags":["flask","plotly","word","cloud","python","web","tutorial","reddit","javascript","d3","d3-cloud"],"picture":"\/static\/blog\/flask-d3-wordcloud\/header.jpg"},{"time_created":"February 07, 2017","url":"\/blog\/flask-plotly-top-ten","title":"Pie Chart With Flask and Plotly","tags":["flask","plotly","pie","chart","python","web","tutorial","reddit","javascript"],"picture":"\/static\/blog\/flask-plotly-top-ten\/header.jpg"},{"time_created":"March 4, 2017","url":"\/blog\/flask-plotly-sentiment-analysis","title":"Sentiment Analysis With Textblob, Plotly and Flask","tags":["flask","plotly","pie","chart","python","web","tutorial","reddit","textblob","sentiment","analysis"],"picture":"\/static\/blog\/flask-plotly-sentiment-analysis\/header.jpg"},{"time_created":"March 10, 2017","url":"\/blog\/RL-multi-armed-bandit","title":"Reinforcement Learning: Multi-Armed Bandit","tags":["python","reinforcement","tutorial","learning","RL","bandit"],"picture":"\/static\/blog\/RL-multi-armed-bandit\/header.jpg"},{"time_created":"March 15, 2017","url":"\/blog\/RL-grid-world","title":"Reinforcement Learning: Grid World","tags":["python","reinforcement","tutorial","learning","RL","grid","world"],"picture":"\/static\/blog\/RL-grid-world\/header.jpg"},{"time_created":"March 18, 2017","url":"\/blog\/opencv-arrow-detection","title":"OpenCV: Arrow Detection","tags":["python","open","cv","arrow","detection","computer","vision"],"picture":"\/static\/blog\/opencv-arrow-detection\/header.jpg"},{"time_created":"March 19, 2017","url":"\/blog\/RL-multi-armed-bandit-2","title":"Reinforcement Learning: Multi-Armed Bandit - Part II","tags":["python","reinforcement","tutorial","learning","RL","bandit"],"picture":"\/static\/blog\/RL-multi-armed-bandit-2\/header.jpg"},{"time_created":"May 15, 2017","url":"\/blog\/RL-multi-armed-bandit-3","title":"Reinforcement Learning: Multi-Armed Bandit - Part III (featuring Neural Networks!)","tags":["python","reinforcement","tutorial","learning","RL","bandit","neural","networks"],"picture":"\/static\/blog\/RL-multi-armed-bandit-3\/header.jpg"},{"time_created":"June 8, 2017","url":"\/blog\/crazy-taxi-1","title":"Crazy \"Self Driving\" Taxi 1","tags":["python","open","cv","crazy","taxi"],"picture":"\/static\/blog\/crazy-taxi-1\/1.PNG"}];
+            $.getJSON( "db.json", function( db_json ) {
+              var output = '';
+              $(db_json).each(function(i, item){
+                  console.log(item);
+                  
+                  output += `
+                    <div class="col-sm-6">
+                      <a href="`+item.url+`"><h3>`+item.title+`</h3></a><img style="width: 50%" src="`+item.picture+`"><br><br>
+                  `;
+                  $(item.tags).each(function(j, tag){
+                    output += `<custompre>`+tag+`</custompre>`;
+                  });
+                  output += `</p></div>`
+                  if(i % 2 == 0){
+                    output += `</div></div class="row">`;
+                    
+                  }
+                  // output += `</div>`;
+                  $('#blog-imgs').html(output); // <ul id="example"></ul>    
+              });
+          });
+
+          //   {% for post in all_blogs %}
+					// <div class="col-sm-6">
+					// 	<a href="{{post.url}}"><h3>{{post.title}}</h3></a>
+					// 	<img style="width: 50%" src="{{post.picture}}">
+					// 	<br><br>
+					// 	<p>Tags:
+					// 		{% for tag in post.tags %}
+					// 			<custompre>{{tag}}</custompre>
+					// 		{%endfor%}
+					// 	</p>
+					// </div>
+          // {% if loop.index % 2 == 0 %}
+          // </div>
+          //   <div class="row">
+          //     {% endif%}
+			    //     {% endfor %}
+          
+
+          </script>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+  pre {
+  	background: #272822;
+  }
+  custompre {
+    padding: 2.2px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  }
+
+</style>
+<!-- Home JavaScript -->
+<script src="js/home.js" type="text/javascript"></script>
+
+<!-- Start footer -->
+<footer class="footer">
+	<div class="container">
+		<nav class="pull-left">
+			<a rel="tooltip" title="Follow me on GitHub" data-placement="top" href="https://github.com/michael-pacheco"
+				target="_blank" class="btn btn-white btn-simple btn-just-icon">
+				<i class="fa fa-github fa-lg" style="color: black;"></i>
+			</a>
+			<a rel="tooltip" title="Follow me on YouTube" data-placement="top"
+				href="https://www.youtube.com/channel/UCFdtSaX-Gj0KH_Mc1QEnJ5Q" target="_blank"
+				class="btn btn-white btn-simple btn-just-icon">
+				<i class="fa fa-youtube-play fa-lg" style="color:black;"></i>
+			</a>
+			<a rel="tooltip" href="https://www.linkedin.com/in/michael-pacheco-470289123/"
+				title="Connect with me on LinkedIn" data-placement="top" target="_blank"
+				class="btn btn-white btn-simple btn-just-icon">
+				<i class="fa fa-linkedin fa-lg" style="color: black;"></i>
+			</a>
+
+			<a rel="tooltip" title="Email me" data-placement="top" target="_blank"
+				href="mailto:pacheco.a.michael@gmail.com" class="btn btn-white btn-simple btn-just-icon">
+				<i class="fa fa-envelope fa-lg" style="color: black;"></i>
+			</a>
+
+
+		</nav>
+		<div class="copyright pull-right">
+		</div>
+	</div>
+</footer>
+<!-- End footer -->
